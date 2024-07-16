@@ -1,20 +1,19 @@
 import numpy as np
 import time
-# Python cyklus
+# Python
 
 start = time.time()
 
-vysledek = 0
+result = 0
 a = (3, 9, 5)
 b = (8, 7, 4)
 
 for i in range(len(a)):
-    vysledek += a[i]*b[i]
+    result += a[i]*b[i]
 
 end = time.time()
-
-print(f"Skalární součin je {vysledek}\nDoba trvání výpočtu: {(end - start)}")
-
+print(f"Vysledek python: {result}")
+print(f"Doba trvani python: {(end - start)}")
 ###################################
 
 
@@ -25,10 +24,9 @@ start_time = time.time()
 a = np.array([3, 9, 5])
 b = np.array([8, 7, 4])
 
-vysledek = sum(a*b)
+result = sum(a*b)
 
 end_time = time.time()
-
-print(f"Numpy výpočet je: {vysledek}\nDoba trvání výpočtu: {(end_time - start)}")
-
+print(f"Vysledek numpy: {result}")
+print(f"Doba trvani numpy: {(end_time - start_time)}")
 print(f"Rozdíl Numpy vs Python : {(end_time - start) - (end - start)}")
