@@ -23,7 +23,7 @@ iteration_time = []
 gauss_time = []
 size = []
 
-for i in range(1, 3000):
+for i in range(1, 3000, 10):
     matrix= create_matrix(i)
     vector = create_vector(i)
     size.append(i)
@@ -38,6 +38,11 @@ for i in range(1, 3000):
 
     iteration_time.append(iteration_end - iteration_start)
     gauss_time.append(gauss_end - gauss_start)
+
 plt.plot(size, iteration_time, label="Jacobi")
 plt.plot(size, gauss_time, label="Gauss")
-plot.show()
+plt.xlabel('Velikost Matice')
+plt.ylabel('Čas v sekundách')
+plt.legend()
+plt.savefig('Časový_graf.png')
+plt.show()
