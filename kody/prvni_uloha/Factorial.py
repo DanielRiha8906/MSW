@@ -11,7 +11,7 @@ for i in range(1, n+1):
 end = time.time()
 result = str(result)
 
-print(f"Vysledek python: {result[:10]}" )
+print(f"Vysledek python rekurzivní: {result[:10]}" )
 print(f"Doba pythonu: {(end - start)}\n")
 #################################
 
